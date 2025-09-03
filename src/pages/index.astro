@@ -1,8 +1,21 @@
 ---
+import Card from '../components/Card.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="Page Astro">
-	<h1>Astro test</h1>
-	test
+	<h1 class="flex justify-center items-center text-text text-4xl font-bold pt-10">Our Pricing</h1>
+	<div class="flex justify-center items-center gap-6 text-text mt-10 flex-row">
+		<p class="text-text font-bold opacity-50">Annually</p>
+		<label class="relative inline-flex items-center cursor-pointer">
+			<input type="checkbox" value="" class="sr-only peer">
+			<div class="w-11 h-6 bg-linear-65 from-backlinear1 to-backlinear2 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-blue-600 transition-colors"></div>
+			<div class="absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition-transform peer-checked:translate-x-5"></div>
+		</label>
+		<p class="text-text font-bold opacity-50">Monthly</p>
+	</div>
+	<Card title="Basic" price="$199.99" info1="500 GB Storage" info2="2 Users Allowed" info3="Send up to 3 GB" fond="bg-white" button="bg-linear-65 from-backlinear1 to-backlinear2" text="text-text" textbutton="text-white"></Card>
+	<Card title="Professional" price="$249.99" info1="1 TB Storage" info2="5 Users Allowed" info3="Send up to 10 GB " fond="bg-linear-65 from-backlinear1 to-backlinear2" button="bg-white" text="text-white" textbutton="text-backlinear2"></Card>
+	<Card title="Master" price="$399.99" info1="2 TB Storage" info2="10 Users Allowed" info3="Send up to 20 GB" fond="bg-white" button="bg-linear-65 from-backlinear1 to-backlinear2" text="text-text" textbutton="text-white"></Card>
+
 </BaseLayout>

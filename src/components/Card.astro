@@ -1,0 +1,15 @@
+---
+const {title, price, info1, info2, info3, fond, button, text, textbutton } = Astro.props;
+---
+    
+<article class={`flex items-center mt-20 mb-20  rounded-2xl flex-col text-font align-center drop-shadow-2xl justify-center gap-6 w-3/12 py-10 ${fond}`}>
+		<h2 class={`text-2xl ${text}`}>{title}</h2>
+		<h1 class={`text-6xl font-bold border-b border-gray-300 pb-10 text-center w-10/12 ${text}`}>{price}</h1>
+		<div class="flex flex-col gap-7 w-full font-bold justify-center items-center text-center">
+			<p class={`border-b border-gray-300 pb-5 w-10/12 ${text}`}>{info1}</p>
+			<p class={`border-b border-gray-300 pb-5 w-10/12 ${text}`}>{info2}</p>
+			<p class={`border-b border-gray-300 pb-5 w-10/12 ${text}`}>{info3}</p>
+		</div>
+		<button class={` ${button} ${textbutton} py-2 px-26 rounded font-bold `}>LEARN MORE</button>
+	</article>
+
